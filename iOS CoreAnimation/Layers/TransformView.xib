@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TransformView" customModule="iOS_CoreAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="255"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rq1-4F-2s9" userLabel="containerView">
+                    <rect key="frame" x="190" y="53" width="150" height="150"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="8Oh-7T-T3v"/>
+                        <constraint firstAttribute="width" constant="150" id="XK9-C6-Qb4"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KRH-nn-XJj">
+                    <rect key="frame" x="50" y="23" width="60" height="210"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soq-tz-fkg">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="Reset"/>
+                            <connections>
+                                <action selector="resetTransformAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8rH-MU-nQl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yul-u7-aI4">
+                            <rect key="frame" x="0.0" y="30" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="仿射变换"/>
+                            <connections>
+                                <action selector="affineTransformAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="qaA-5C-WK9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpb-cs-WSE">
+                            <rect key="frame" x="0.0" y="60" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="混合变换"/>
+                            <connections>
+                                <action selector="mixTransformAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="a02-kH-BUH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-Xe-mbz">
+                            <rect key="frame" x="0.0" y="90" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="剪切变换"/>
+                            <connections>
+                                <action selector="cutTransformAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="iwZ-eY-v5c"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sc-mP-i2k">
+                            <rect key="frame" x="0.0" y="120" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="3D变换"/>
+                            <connections>
+                                <action selector="transform3DAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="0ef-3j-hu1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TJ-Ty-dlv">
+                            <rect key="frame" x="0.0" y="150" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="投影变换"/>
+                            <connections>
+                                <action selector="operaTransformAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1lo-gc-EJQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYB-2b-r1U">
+                            <rect key="frame" x="0.0" y="180" width="60" height="30"/>
+                            <animations/>
+                            <state key="normal" title="3D"/>
+                            <connections>
+                                <action selector="object3DAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LVo-XS-vDH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dial" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-vB-ZXR">
+                    <rect key="frame" x="190" y="47" width="160" height="160"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="bWF-cK-fQr"/>
+                        <constraint firstAttribute="width" constant="160" id="hKd-FP-5bv"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transform" translatesAutoresizingMaskIntoConstraints="NO" id="Aha-wd-Qt8">
+                    <rect key="frame" x="210" y="63" width="120" height="128"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="a0V-YZ-qz1"/>
+                        <constraint firstAttribute="height" constant="128" id="bC2-7H-V9C"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rq1-4F-2s9" firstAttribute="leading" secondItem="cvw-vB-ZXR" secondAttribute="leading" id="5DP-F8-AXA"/>
+                <constraint firstItem="Aha-wd-Qt8" firstAttribute="top" secondItem="KRH-nn-XJj" secondAttribute="bottom" constant="-125" id="6pF-9b-fJY"/>
+                <constraint firstItem="Aha-wd-Qt8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9gk-N8-gN7"/>
+                <constraint firstItem="rq1-4F-2s9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FoP-Ua-ygO"/>
+                <constraint firstItem="rq1-4F-2s9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GGb-Wj-BJf"/>
+                <constraint firstItem="cvw-vB-ZXR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UIm-fc-iHu"/>
+                <constraint firstItem="KRH-nn-XJj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VGd-YH-2Yk"/>
+                <constraint firstItem="cvw-vB-ZXR" firstAttribute="centerX" secondItem="Aha-wd-Qt8" secondAttribute="centerX" id="VwY-X1-Rst"/>
+                <constraint firstItem="KRH-nn-XJj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="X4c-YO-eXv"/>
+                <constraint firstItem="Aha-wd-Qt8" firstAttribute="leading" secondItem="KRH-nn-XJj" secondAttribute="trailing" constant="100" id="axB-4W-2F3"/>
+                <constraint firstItem="Aha-wd-Qt8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="c5j-6q-0zP"/>
+                <constraint firstItem="cvw-vB-ZXR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="j76-4m-fby"/>
+                <constraint firstItem="rq1-4F-2s9" firstAttribute="top" secondItem="KRH-nn-XJj" secondAttribute="top" id="lVr-Um-SkX"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="UIm-fc-iHu"/>
+                    <exclude reference="FoP-Ua-ygO"/>
+                    <exclude reference="lVr-Um-SkX"/>
+                    <exclude reference="6pF-9b-fJY"/>
+                    <exclude reference="c5j-6q-0zP"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="containerView" destination="rq1-4F-2s9" id="3CF-ZD-2ng"/>
+                <outlet property="dialImageView" destination="cvw-vB-ZXR" id="fns-C0-hHl"/>
+                <outlet property="transformImageView" destination="Aha-wd-Qt8" id="vCm-MK-YUK"/>
+                <outletCollection property="faceViews" destination="yDj-xg-QP2" collectionClass="NSMutableArray" id="X1q-DK-PUR"/>
+                <outletCollection property="faceViews" destination="G1X-v4-gcj" collectionClass="NSMutableArray" id="dga-UQ-oG5"/>
+                <outletCollection property="faceViews" destination="wfa-pp-dOL" collectionClass="NSMutableArray" id="n3R-rq-Qfe"/>
+                <outletCollection property="faceViews" destination="IMG-vI-0WV" collectionClass="NSMutableArray" id="mcZ-5z-PIC"/>
+                <outletCollection property="faceViews" destination="x1q-UM-7x2" collectionClass="NSMutableArray" id="fmF-ft-QN8"/>
+                <outletCollection property="faceViews" destination="zRq-Wu-Fbz" collectionClass="NSMutableArray" id="TlM-5s-5dh"/>
+            </connections>
+            <point key="canvasLocation" x="128" y="-585.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="yDj-xg-QP2" userLabel="1">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAy-P0-ha0">
+                    <rect key="frame" x="50" y="36" width="20" height="48"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="0.27091733870000001" green="0.69348538309999996" blue="0.95473160280000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sAy-P0-ha0" firstAttribute="centerX" secondItem="yDj-xg-QP2" secondAttribute="centerX" id="iu1-QN-0p4"/>
+                <constraint firstItem="sAy-P0-ha0" firstAttribute="centerY" secondItem="yDj-xg-QP2" secondAttribute="centerY" id="mDU-Ie-CM9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-81" y="-314"/>
+        </view>
+        <view contentMode="scaleToFill" id="G1X-v4-gcj" userLabel="5">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ule-h1-W6H">
+                    <rect key="frame" x="47.5" y="36" width="25.5" height="48"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="0.89516410614525144" green="0.89207658514599897" blue="0.083172412339302004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ule-h1-W6H" firstAttribute="centerY" secondItem="G1X-v4-gcj" secondAttribute="centerY" id="ou0-wU-JAc"/>
+                <constraint firstItem="Ule-h1-W6H" firstAttribute="centerX" secondItem="G1X-v4-gcj" secondAttribute="centerX" id="yzH-OG-3MS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="119" y="-104"/>
+        </view>
+        <view contentMode="scaleToFill" id="wfa-pp-dOL" userLabel="3">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Non-o0-Xkx">
+                    <rect key="frame" x="47" y="36" width="26.5" height="48"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="0.19921761471920063" green="0.87089734636871508" blue="0.45960939810252555" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Non-o0-Xkx" firstAttribute="centerY" secondItem="wfa-pp-dOL" secondAttribute="centerY" id="A8Q-bu-AGs"/>
+                <constraint firstItem="Non-o0-Xkx" firstAttribute="centerX" secondItem="wfa-pp-dOL" secondAttribute="centerX" id="hqr-cR-pfr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="319" y="-104"/>
+        </view>
+        <view contentMode="scaleToFill" id="IMG-vI-0WV" userLabel="4">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvW-Cz-MGe">
+                    <rect key="frame" x="47" y="36" width="26.5" height="48"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="1" green="0.17260955950000001" blue="0.095924654799999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rvW-Cz-MGe" firstAttribute="centerX" secondItem="IMG-vI-0WV" secondAttribute="centerX" id="d2o-0K-GBs"/>
+                <constraint firstItem="rvW-Cz-MGe" firstAttribute="centerY" secondItem="IMG-vI-0WV" secondAttribute="centerY" id="xQY-yD-Z6L"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-81" y="-104"/>
+        </view>
+        <view contentMode="scaleToFill" id="x1q-UM-7x2" userLabel="5">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umP-6m-cr8">
+                    <rect key="frame" x="47" y="36" width="26" height="48"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="0.23016292069899494" green="0.16092218075070727" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="umP-6m-cr8" firstAttribute="centerX" secondItem="x1q-UM-7x2" secondAttribute="centerX" id="5RM-Qv-fq5"/>
+                <constraint firstItem="umP-6m-cr8" firstAttribute="centerY" secondItem="x1q-UM-7x2" secondAttribute="centerY" id="sz4-09-svJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="319" y="-314"/>
+        </view>
+        <view contentMode="scaleToFill" id="zRq-Wu-Fbz" userLabel="6">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-I0-MLp">
+                    <rect key="frame" x="48" y="36" width="24.5" height="48"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                    <color key="textColor" red="1" green="0.67450980390000004" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UIH-I0-MLp" firstAttribute="centerY" secondItem="zRq-Wu-Fbz" secondAttribute="centerY" id="5a2-pm-vC7"/>
+                <constraint firstItem="UIH-I0-MLp" firstAttribute="centerX" secondItem="zRq-Wu-Fbz" secondAttribute="centerX" id="d41-Pd-d4E"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="119" y="-314"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dial" width="356" height="343"/>
+        <image name="transform" width="240" height="240"/>
+    </resources>
+</document>

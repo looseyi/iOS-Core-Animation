@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CAMediaTimingView" customModule="iOS_CoreAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="duration" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-XI-iok">
+                    <rect key="frame" x="139" y="152" width="59" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="repeatCount" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="A16-yC-QmT">
+                    <rect key="frame" x="206" y="152" width="91" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBx-y8-AQY">
+                    <rect key="frame" x="305" y="152" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="star"/>
+                    <connections>
+                        <action selector="start:" destination="iN0-l3-epB" eventType="touchUpInside" id="UXZ-dA-900"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Cr-Zi-VLd">
+                    <rect key="frame" x="29" y="50" width="93" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-bp-Rg2">
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="30"/>
+                            <animations/>
+                            <state key="normal" title="Duration"/>
+                            <connections>
+                                <action selector="durationAnimationAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="WV8-r9-by2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0X4-dH-uNW">
+                            <rect key="frame" x="0.0" y="30" width="93" height="30"/>
+                            <animations/>
+                            <state key="normal" title="autoReverses"/>
+                            <connections>
+                                <action selector="autoReversesAnimationAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="feG-6S-gcF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWb-53-S0r">
+                            <rect key="frame" x="0.0" y="60" width="93" height="30"/>
+                            <animations/>
+                            <state key="normal" title="RelateTime"/>
+                            <connections>
+                                <action selector="relateTimeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="cZE-vr-pz1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                </stackView>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-gf-36F">
+                    <rect key="frame" x="16" y="8" width="118" height="31"/>
+                    <animations/>
+                    <connections>
+                        <action selector="timeOffsetAction:" destination="iN0-l3-epB" eventType="valueChanged" id="ddm-hq-Xi8"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timeOffset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgH-5T-jBp">
+                    <rect key="frame" x="137" y="8" width="61" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lln-Ff-7rN">
+                    <rect key="frame" x="325" y="6" width="48" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76Y-Yo-Fud">
+                    <rect key="frame" x="343" y="152" width="30" height="30"/>
+                    <animations/>
+                    <state key="normal" title="play"/>
+                    <connections>
+                        <action selector="play:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Nm-eM-zbW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNV-PO-O4D">
+                    <rect key="frame" x="146" y="27.5" width="42" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUX-N1-A6u">
+                    <rect key="frame" x="325" y="27" width="42" height="21"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BDI-TA-2o2">
+                    <rect key="frame" x="201" y="8" width="118" height="31"/>
+                    <animations/>
+                    <connections>
+                        <action selector="speedAction:" destination="iN0-l3-epB" eventType="valueChanged" id="55e-3R-6P0"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6Cr-Zi-VLd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mf6-i4-NWK"/>
+                <constraint firstItem="6Cr-Zi-VLd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="29" id="z41-1c-azC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="durationField" destination="LVv-XI-iok" id="yz3-rk-fen"/>
+                <outlet property="playButton" destination="76Y-Yo-Fud" id="Buj-Br-2Ay"/>
+                <outlet property="repeatCountField" destination="A16-yC-QmT" id="9yh-BZ-I2d"/>
+                <outlet property="speedLabel" destination="zUX-N1-A6u" id="Z1K-wY-IwZ"/>
+                <outlet property="speedSlider" destination="BDI-TA-2o2" id="5tE-Cl-A7D"/>
+                <outlet property="startButton" destination="RBx-y8-AQY" id="UQh-jR-j4u"/>
+                <outlet property="timeOffsetLabel" destination="iNV-PO-O4D" id="YEb-Ls-z0F"/>
+                <outlet property="timeOffsetSlider" destination="oT2-gf-36F" id="MRu-0Y-gFM"/>
+            </connections>
+            <point key="canvasLocation" x="275.5" y="14"/>
+        </view>
+    </objects>
+</document>

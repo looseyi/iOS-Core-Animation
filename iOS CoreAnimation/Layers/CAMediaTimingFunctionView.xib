@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CAMediaTimingFunctionView" customModule="iOS_CoreAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="445" height="208"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjI-Do-yWA">
+                    <rect key="frame" x="307" y="0.0" width="120" height="208"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="O3Q-a7-bZU"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="PAT-K6-XA6"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="mBl-kT-xqh"/>
+                    </connections>
+                </pickerView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-O5-BfO">
+                    <rect key="frame" x="8" y="10" width="331" height="188"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-iB-feb">
+                    <rect key="frame" x="333" y="11" width="94" height="30"/>
+                    <animations/>
+                    <state key="normal" title="BollAnimation"/>
+                    <connections>
+                        <action selector="bollAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="NBD-Y5-Qfk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6Ho-iB-feb" secondAttribute="trailing" constant="10" id="5iE-1K-A5n"/>
+                <constraint firstItem="gC2-O5-BfO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="BK8-to-Hjz"/>
+                <constraint firstItem="6Ho-iB-feb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="11" id="UkQ-ud-ahc"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="leading" secondItem="gC2-O5-BfO" secondAttribute="trailing" constant="8" symbolic="YES" id="Xr6-HI-bGA"/>
+                <constraint firstItem="gC2-O5-BfO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Xtm-Kx-k3m"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bhl-N6-6bC"/>
+                <constraint firstAttribute="trailing" secondItem="gC2-O5-BfO" secondAttribute="trailing" constant="106" id="byK-KI-ZdK"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" constant="-10" id="lxI-In-w5O"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="pbQ-v3-hHp"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="qwx-op-zO0"/>
+                <constraint firstAttribute="bottom" secondItem="gC2-O5-BfO" secondAttribute="bottom" constant="10" id="y4W-cZ-YcD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Xr6-HI-bGA"/>
+                    <exclude reference="pbQ-v3-hHp"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="containerView" destination="gC2-O5-BfO" id="ktL-SU-1go"/>
+            </connections>
+            <point key="canvasLocation" x="343.5" y="-81"/>
+        </view>
+    </objects>
+</document>

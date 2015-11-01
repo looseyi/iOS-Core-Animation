@@ -1,0 +1,62 @@
+[
+  {
+    "title": "2. 寄宿图&property",
+    "description": "通过寄宿图如何显示和放置图片， 使用拼合技术来显示， 以及用CALayerDelegate和Core Graphics来绘制图层内容",
+    "layer": "Property",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/2-%E5%AF%84%E5%AE%BF%E5%9B%BE/%E5%AF%84%E5%AE%BF%E5%9B%BE.md"
+  },
+  {
+    "title": "3. 图形几何学",
+    "description": "CALayer的集合结构，包括它的frame，position和bounds，介绍了三维空间内图层的概念，以及如何在独立的图层内响应事件，最后简单说明了在iOS平台，Core Animation对自动调整和自动布局支持的缺乏",
+    "layer": "Clock",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/3-%E5%9B%BE%E5%B1%82%E5%87%A0%E4%BD%95%E5%AD%A6/%E5%9B%BE%E5%B1%82%E5%87%A0%E4%BD%95%E5%AD%A6.md"
+  },
+  {
+    "title": "4. 视觉效果",
+    "description": "CALayer属性实现的视觉效果, 比如圆角，阴影和蒙板。我们也了解了拉伸过滤器和组透明。",
+    "layer": "LCD",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/4-%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C/4-%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C.md"
+  },
+  {
+    "title": "5. 变换",
+    "description": "涉及了一些2D和3D的变换。你学习了一些矩阵计算的基础，以及如何用Core Animation创建3D场景。你看到了图层背后到底是如何呈现的，并且知道了不能把扁平的图片做成真实的立体效果，最后我们用demo说明了触摸事件的处理，视图中图层添加的层级顺序会比屏幕上显示的顺序更有意义。",
+    "layer": "AffineTransform",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/5-%E5%8F%98%E6%8D%A2/%E5%8F%98%E6%8D%A2.md"
+  },
+  {
+    "title": "6. 专有图层",
+    "description": "简要概述了一些专用图层以及用他们实现的一些效果，我们只是了解到这些图层的皮毛，像CATiledLayer和CAEMitterLayer这些类可以单独写一章的。但是，重点是记住CALayer是用处很大的，而且它并没有为所有可能的场景进行优化。为了获得Core Animation最好的性能，你需要为你的工作选对正确的工具，希望你能够挖掘这些不同的CALayer子类的功能。 这一章我们通过CAEmitterLayer和AVPlayerLayer类简单地接触到了一些动画，在第二章，我们将继续深入研究动画，就从隐式动画开始。",
+    "layer": "Special Layer",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/6-%E4%B8%93%E6%9C%89%E5%9B%BE%E5%B1%82/6-%E4%B8%93%E6%9C%89%E5%9B%BE%E5%B1%82.md"
+  },
+  {
+    "title": "7. 隐式动画",
+    "description": "隐式动画，还有Core Animation对指定属性选择合适的动画行为的机制。同时你知道了UIKit是如何充分利用Core Animation的隐式动画机制来强化它的显式系统，以及动画是如何被默认禁用并且当需要的时候启用的。最后，你了解了呈现和模型图层，以及Core Animation是如何通过它们来判断出图层当前位置以及将要到达的位置。",
+    "layer": "Animation CATransaction",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/7-%E9%9A%90%E5%BC%8F%E5%8A%A8%E7%94%BB/%E9%9A%90%E5%BC%8F%E5%8A%A8%E7%94%BB.md"
+  },
+  {
+    "title": "8. 显示动画",
+    "description": "涉及了属性动画（你可以对单独的图层属性动画有更加具体的控制），动画组（把多个属性动画组合成一个独立单元）以及过度（影响整个图层，可以用来对图层的任何内容做任何类型的动画，包括子图层的添加和移除）\n回调方法在动画完成之前已经被调用了，但不能保证这发生在属性动画返回初始状态之前。这同时也很好地说明了为什么要在真实的设备上测试动画代码，而不仅仅是模拟器。我们可以用一个fillMode属性来解决这个问题，下一章会详细说明，这里知道在动画之前设置它比在动画结束之后更新属性更加方便。\n关键帧起源于传动动画，意思是指主导的动画在显著改变发生时重绘当前帧（也就是关键帧），每帧之间剩下的绘制（可以通过关键帧推算出）将由熟练的艺术家来完成。CAKeyframeAnimation也是同样的道理：你提供了显著的帧，然后Core Animation在每帧之间进行插入。",
+    "layer": "CABaseAnimation，CAKeyframeAnimation",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/8-%E6%98%BE%E5%BC%8F%E5%8A%A8%E7%94%BB/%E6%98%BE%E5%BC%8F%E5%8A%A8%E7%94%BB.md"
+  },
+  {
+    "title": "9 图层时间",
+    "description": "了解CAMediaTiming协议，以及Core Animation用来操作时间控制动画的机制。在下一章，我们将要接触缓冲，另一个用来使动画更加真实的操作时间的技术。CAGroupAnimation调整duration和repeatCount/repeatDuration属性并不会影响到子动画。但是beginTime，timeOffset和speed属性将会影响到子动画。然而在层级关系中，beginTime指定了父图层开始动画（或者组合关系中的父动画）和对象将要开始自己动画之间的偏移。类似的，调整CALayer和CAGroupAnimation的speed属性将会对动画以及子动画速度应用一个缩放的因子。",
+    "layer": "CAMediaTiming",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/9-%E5%9B%BE%E5%B1%82%E6%97%B6%E9%97%B4/%E5%9B%BE%E5%B1%82%E6%97%B6%E9%97%B4.md"
+  },
+  {
+    "title": "10. 缓冲",
+    "description": "缓冲 CAMediaTimingFunction类，它可以允许我们创建自定义的缓冲函数来完善我们的动画，同样了解了如何用CAKeyframeAnimation来避开CAMediaTimingFunction的限制，创建完全自定义的缓冲函数. 现实生活中的任何一个物体都会在运动中加速或者减速。那么我们如何在动画中实现这种加速度呢？一种方法是使用物理引擎来对运动物体的摩擦和动量来建模，然而这会使得计算过于复杂。我们称这种类型的方程为缓冲函数",
+    "layer": "CAMediaTimingFunction",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/10-%E7%BC%93%E5%86%B2/%E7%BC%93%E5%86%B2.md"
+  },
+  {
+    "title": "11. 定时器的动画",
+    "description": "通过一个计时器创建一帧帧的实时动画，包括缓冲，物理模拟等等一系列动画技术，以及用户输入（通过加速计）",
+    "layer": "CAMediaTimingFunction",
+    "url": "https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques/blob/master/11-%E5%9F%BA%E4%BA%8E%E5%AE%9A%E6%97%B6%E5%99%A8%E7%9A%84%E5%8A%A8%E7%94%BB/%E5%9F%BA%E4%BA%8E%E5%AE%9A%E6%97%B6%E5%99%A8%E7%9A%84%E5%8A%A8%E7%94%BB.md"
+  }
+]
