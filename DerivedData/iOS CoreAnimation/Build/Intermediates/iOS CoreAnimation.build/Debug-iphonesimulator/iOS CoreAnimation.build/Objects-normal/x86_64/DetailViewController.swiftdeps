@@ -6,49 +6,51 @@ provides-nominal:
 provides-member:
 - ["C17iOS_CoreAnimation20DetailViewController", ""]
 provides-dynamic-lookup:
-- "detailDescriptionLabel"
-- "descriptionView"
-- "didReceiveMemoryWarning"
-- "drawLayer"
-- "viewDidLoad"
 - "webView"
 - "configureView"
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "descriptionView"
+- "detailDescriptionLabel"
+- "drawLayer"
 depends-top-level:
-- !private "CGRectGetMidX"
-- !private "ClockView"
-- !private "NSURLRequest"
-- "DetailViewController"
-- !private "UIScreen"
 - !private "CGRectGetWidth"
-- !private "StringLiteralType"
-- !private "UIColor"
-- !private "SpecialLayer"
-- !private "CAMediaTimingFunctionView"
-- !private "CGContextStrokeEllipseInRect"
-- !private "NSBundle"
-- !private "CGRectGetMaxY"
-- !private "CGRectGetHeight"
-- "UIViewController"
-- !private "LCDClockView"
-- "UILabel"
-- !private "TransactionView"
-- !private "~="
 - !private "+"
-- !private "NSURL"
-- !private "-"
-- "CALayer"
-- "UITextView"
-- !private "CGContextSetLineWidth"
-- !private "PropertyAnimationView"
+- !private "UIScreen"
+- !private "NSBundle"
 - !private "CGContextSetStrokeColorWithColor"
-- !private "CGRectMake"
-- "CGContext"
-- "ContentModel"
-- !private "TransformView"
+- !private "LCDClockView"
 - "WKWebView"
-- !private "String"
-- !private "CGPointMake"
+- "UITextView"
+- !private "ImageIOView"
+- !private "~="
+- !private "NSURLRequest"
+- !private "TransformView"
+- !private "StringLiteralType"
 - !private "CAMediaTimingView"
+- !private "CAMediaTimingFunctionView"
+- !private "CGRectMake"
+- !private "SpecialLayer"
+- !private "-"
+- !private "TickAnimationView"
+- !private "CGRectGetMidX"
+- "ContentModel"
+- !private "String"
+- !private "NSURL"
+- !private "PropertyAnimationView"
+- !private "TransactionView"
+- "CGContext"
+- "UIViewController"
+- !private "CGRectGetMaxY"
+- !private "ClockView"
+- "DetailViewController"
+- !private "CGPointMake"
+- "UILabel"
+- !private "CGContextSetLineWidth"
+- !private "CGRectGetHeight"
+- !private "UIColor"
+- "CALayer"
+- !private "CGContextStrokeEllipseInRect"
 depends-member:
 - !private ["PSs9AnyObject", "CALayer"]
 - !private ["PSs9AnyObject", "CGColor"]
@@ -61,10 +63,12 @@ depends-member:
 - !private ["PSs9AnyObject", "CGRectGetMidX"]
 - !private ["PSs9AnyObject", "CGRectGetWidth"]
 - !private ["PSs9AnyObject", "CGRectMake"]
+- !private ["PSs9AnyObject", "ImageIOView"]
 - !private ["PSs9AnyObject", "NSBundle"]
 - !private ["PSs9AnyObject", "NSURL"]
 - !private ["PSs9AnyObject", "NSURLRequest"]
 - !private ["PSs9AnyObject", "PropertyAnimationView"]
+- !private ["PSs9AnyObject", "TickAnimationView"]
 - !private ["PSs9AnyObject", "TransactionView"]
 - !private ["PSs9AnyObject", "UIColor"]
 - !private ["PSs9AnyObject", "UIScreen"]
@@ -77,8 +81,10 @@ depends-member:
 - ["PSs9AnyObject", "_lgc_setupCAPropertyAnimation"]
 - ["PSs9AnyObject", "_lgc_setupCATransaction"]
 - ["PSs9AnyObject", "_lgc_setupClockLayer"]
+- ["PSs9AnyObject", "_lgc_setupImageIOView"]
 - ["PSs9AnyObject", "_lgc_setupLCDClockLayer"]
 - ["PSs9AnyObject", "_lgc_setupSpecialLayerView"]
+- ["PSs9AnyObject", "_lgc_setupTickAnimationView"]
 - !private ["PSs9AnyObject", "addSublayer"]
 - !private ["PSs9AnyObject", "addSubview"]
 - !private ["PSs9AnyObject", "backgroundColor"]
@@ -158,11 +164,13 @@ depends-member:
 - !private ["PSs11CVarArgType", "CGRectGetWidth"]
 - !private ["PSs11CVarArgType", "CGRectMake"]
 - !private ["PSs11CVarArgType", "Distance"]
+- !private ["PSs11CVarArgType", "ImageIOView"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSBundle"]
 - !private ["PSs11CVarArgType", "NSURL"]
 - !private ["PSs11CVarArgType", "NSURLRequest"]
 - !private ["PSs11CVarArgType", "PropertyAnimationView"]
+- !private ["PSs11CVarArgType", "TickAnimationView"]
 - !private ["PSs11CVarArgType", "TransactionView"]
 - !private ["PSs11CVarArgType", "UIColor"]
 - !private ["PSs11CVarArgType", "UIScreen"]
@@ -175,8 +183,10 @@ depends-member:
 - ["PSs11CVarArgType", "_lgc_setupCAPropertyAnimation"]
 - ["PSs11CVarArgType", "_lgc_setupCATransaction"]
 - ["PSs11CVarArgType", "_lgc_setupClockLayer"]
+- ["PSs11CVarArgType", "_lgc_setupImageIOView"]
 - ["PSs11CVarArgType", "_lgc_setupLCDClockLayer"]
 - ["PSs11CVarArgType", "_lgc_setupSpecialLayerView"]
+- ["PSs11CVarArgType", "_lgc_setupTickAnimationView"]
 - !private ["PSs11CVarArgType", "addSublayer"]
 - !private ["PSs11CVarArgType", "addSubview"]
 - !private ["PSs11CVarArgType", "backgroundColor"]
@@ -236,6 +246,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "CGRectMake"]
 - !private ["PSs23CustomStringConvertible", "Distance"]
 - !private ["PSs23CustomStringConvertible", "Generator"]
+- !private ["PSs23CustomStringConvertible", "ImageIOView"]
 - !private ["PSs23CustomStringConvertible", "Index"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "NSBundle"]
@@ -244,6 +255,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "PropertyAnimationView"]
 - ["PSs23CustomStringConvertible", "Some"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
+- !private ["PSs23CustomStringConvertible", "TickAnimationView"]
 - !private ["PSs23CustomStringConvertible", "TransactionView"]
 - !private ["PSs23CustomStringConvertible", "UIColor"]
 - !private ["PSs23CustomStringConvertible", "UIScreen"]
@@ -257,8 +269,10 @@ depends-member:
 - ["PSs23CustomStringConvertible", "_lgc_setupCAPropertyAnimation"]
 - ["PSs23CustomStringConvertible", "_lgc_setupCATransaction"]
 - ["PSs23CustomStringConvertible", "_lgc_setupClockLayer"]
+- ["PSs23CustomStringConvertible", "_lgc_setupImageIOView"]
 - ["PSs23CustomStringConvertible", "_lgc_setupLCDClockLayer"]
 - ["PSs23CustomStringConvertible", "_lgc_setupSpecialLayerView"]
+- ["PSs23CustomStringConvertible", "_lgc_setupTickAnimationView"]
 - !private ["PSs23CustomStringConvertible", "addSublayer"]
 - !private ["PSs23CustomStringConvertible", "addSubview"]
 - !private ["PSs23CustomStringConvertible", "backgroundColor"]
@@ -305,6 +319,7 @@ depends-member:
 - !private ["C17iOS_CoreAnimation20DetailViewController", "CGRectMake"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "ClockView"]
 - ["C17iOS_CoreAnimation20DetailViewController", "ContentModel"]
+- !private ["C17iOS_CoreAnimation20DetailViewController", "ImageIOView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "LCDClockView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "NSBundle"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "NSURL"]
@@ -312,6 +327,7 @@ depends-member:
 - !private ["C17iOS_CoreAnimation20DetailViewController", "PropertyAnimationView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "SpecialLayer"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "String"]
+- !private ["C17iOS_CoreAnimation20DetailViewController", "TickAnimationView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "TransactionView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "TransformView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "UIColor"]
@@ -327,8 +343,10 @@ depends-member:
 - !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupCAPropertyAnimation"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupCATransaction"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupClockLayer"]
+- !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupImageIOView"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupLCDClockLayer"]
 - !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupSpecialLayerView"]
+- !private ["C17iOS_CoreAnimation20DetailViewController", "_lgc_setupTickAnimationView"]
 - ["C17iOS_CoreAnimation20DetailViewController", "configureView"]
 - ["C17iOS_CoreAnimation20DetailViewController", "deinit"]
 - ["C17iOS_CoreAnimation20DetailViewController", "descriptionView"]
@@ -352,11 +370,13 @@ depends-member:
 - !private ["PSs9Equatable", "CGRectGetWidth"]
 - !private ["PSs9Equatable", "CGRectMake"]
 - !private ["PSs9Equatable", "Distance"]
+- !private ["PSs9Equatable", "ImageIOView"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSBundle"]
 - !private ["PSs9Equatable", "NSURL"]
 - !private ["PSs9Equatable", "NSURLRequest"]
 - !private ["PSs9Equatable", "PropertyAnimationView"]
+- !private ["PSs9Equatable", "TickAnimationView"]
 - !private ["PSs9Equatable", "TransactionView"]
 - !private ["PSs9Equatable", "UIColor"]
 - !private ["PSs9Equatable", "UIScreen"]
@@ -370,8 +390,10 @@ depends-member:
 - ["PSs9Equatable", "_lgc_setupCAPropertyAnimation"]
 - ["PSs9Equatable", "_lgc_setupCATransaction"]
 - ["PSs9Equatable", "_lgc_setupClockLayer"]
+- ["PSs9Equatable", "_lgc_setupImageIOView"]
 - ["PSs9Equatable", "_lgc_setupLCDClockLayer"]
 - ["PSs9Equatable", "_lgc_setupSpecialLayerView"]
+- ["PSs9Equatable", "_lgc_setupTickAnimationView"]
 - !private ["PSs9Equatable", "addSublayer"]
 - !private ["PSs9Equatable", "addSubview"]
 - !private ["PSs9Equatable", "backgroundColor"]
@@ -417,11 +439,13 @@ depends-member:
 - !private ["PSs8Hashable", "CGRectGetWidth"]
 - !private ["PSs8Hashable", "CGRectMake"]
 - !private ["PSs8Hashable", "Distance"]
+- !private ["PSs8Hashable", "ImageIOView"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSBundle"]
 - !private ["PSs8Hashable", "NSURL"]
 - !private ["PSs8Hashable", "NSURLRequest"]
 - !private ["PSs8Hashable", "PropertyAnimationView"]
+- !private ["PSs8Hashable", "TickAnimationView"]
 - !private ["PSs8Hashable", "TransactionView"]
 - !private ["PSs8Hashable", "UIColor"]
 - !private ["PSs8Hashable", "UIScreen"]
@@ -435,8 +459,10 @@ depends-member:
 - ["PSs8Hashable", "_lgc_setupCAPropertyAnimation"]
 - ["PSs8Hashable", "_lgc_setupCATransaction"]
 - ["PSs8Hashable", "_lgc_setupClockLayer"]
+- ["PSs8Hashable", "_lgc_setupImageIOView"]
 - ["PSs8Hashable", "_lgc_setupLCDClockLayer"]
 - ["PSs8Hashable", "_lgc_setupSpecialLayerView"]
+- ["PSs8Hashable", "_lgc_setupTickAnimationView"]
 - !private ["PSs8Hashable", "addSublayer"]
 - !private ["PSs8Hashable", "addSubview"]
 - !private ["PSs8Hashable", "backgroundColor"]
@@ -467,6 +493,8 @@ depends-member:
 - ["PSs8Hashable", "webView"]
 - !private ["PSs8Hashable", "yellowColor"]
 - ["PSs8Hashable", ""]
+- !private ["C17iOS_CoreAnimation11ImageIOView", "frame"]
+- !private ["C17iOS_CoreAnimation11ImageIOView", "init"]
 - ["SQ", "Some"]
 - !private ["SQ", "deinit"]
 - !private ["PSs9Indexable", "Generator"]
@@ -511,10 +539,12 @@ depends-member:
 - !private ["PSo8NSCoding", "CGRectGetMidX"]
 - !private ["PSo8NSCoding", "CGRectGetWidth"]
 - !private ["PSo8NSCoding", "CGRectMake"]
+- !private ["PSo8NSCoding", "ImageIOView"]
 - !private ["PSo8NSCoding", "NSBundle"]
 - !private ["PSo8NSCoding", "NSURL"]
 - !private ["PSo8NSCoding", "NSURLRequest"]
 - !private ["PSo8NSCoding", "PropertyAnimationView"]
+- !private ["PSo8NSCoding", "TickAnimationView"]
 - !private ["PSo8NSCoding", "TransactionView"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIScreen"]
@@ -527,8 +557,10 @@ depends-member:
 - ["PSo8NSCoding", "_lgc_setupCAPropertyAnimation"]
 - ["PSo8NSCoding", "_lgc_setupCATransaction"]
 - ["PSo8NSCoding", "_lgc_setupClockLayer"]
+- ["PSo8NSCoding", "_lgc_setupImageIOView"]
 - ["PSo8NSCoding", "_lgc_setupLCDClockLayer"]
 - ["PSo8NSCoding", "_lgc_setupSpecialLayerView"]
+- ["PSo8NSCoding", "_lgc_setupTickAnimationView"]
 - !private ["PSo8NSCoding", "addSublayer"]
 - !private ["PSo8NSCoding", "addSubview"]
 - !private ["PSo8NSCoding", "backgroundColor"]
@@ -569,10 +601,12 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGRectGetMidX"]
 - !private ["PSo26NSExtensionRequestHandling", "CGRectGetWidth"]
 - !private ["PSo26NSExtensionRequestHandling", "CGRectMake"]
+- !private ["PSo26NSExtensionRequestHandling", "ImageIOView"]
 - !private ["PSo26NSExtensionRequestHandling", "NSBundle"]
 - !private ["PSo26NSExtensionRequestHandling", "NSURL"]
 - !private ["PSo26NSExtensionRequestHandling", "NSURLRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "PropertyAnimationView"]
+- !private ["PSo26NSExtensionRequestHandling", "TickAnimationView"]
 - !private ["PSo26NSExtensionRequestHandling", "TransactionView"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIScreen"]
@@ -585,8 +619,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "_lgc_setupCAPropertyAnimation"]
 - ["PSo26NSExtensionRequestHandling", "_lgc_setupCATransaction"]
 - ["PSo26NSExtensionRequestHandling", "_lgc_setupClockLayer"]
+- ["PSo26NSExtensionRequestHandling", "_lgc_setupImageIOView"]
 - ["PSo26NSExtensionRequestHandling", "_lgc_setupLCDClockLayer"]
 - ["PSo26NSExtensionRequestHandling", "_lgc_setupSpecialLayerView"]
+- ["PSo26NSExtensionRequestHandling", "_lgc_setupTickAnimationView"]
 - ["PSo26NSExtensionRequestHandling", "configureView"]
 - ["PSo26NSExtensionRequestHandling", "descriptionView"]
 - ["PSo26NSExtensionRequestHandling", "detailDescriptionLabel"]
@@ -615,6 +651,7 @@ depends-member:
 - !private ["CSo8NSObject", "CGRectMake"]
 - !private ["CSo8NSObject", "ClockView"]
 - ["CSo8NSObject", "ContentModel"]
+- !private ["CSo8NSObject", "ImageIOView"]
 - !private ["CSo8NSObject", "LCDClockView"]
 - !private ["CSo8NSObject", "NSBundle"]
 - !private ["CSo8NSObject", "NSURL"]
@@ -622,6 +659,7 @@ depends-member:
 - !private ["CSo8NSObject", "PropertyAnimationView"]
 - !private ["CSo8NSObject", "SpecialLayer"]
 - !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "TickAnimationView"]
 - !private ["CSo8NSObject", "TransactionView"]
 - !private ["CSo8NSObject", "TransformView"]
 - !private ["CSo8NSObject", "UIColor"]
@@ -637,8 +675,10 @@ depends-member:
 - ["CSo8NSObject", "_lgc_setupCAPropertyAnimation"]
 - ["CSo8NSObject", "_lgc_setupCATransaction"]
 - ["CSo8NSObject", "_lgc_setupClockLayer"]
+- ["CSo8NSObject", "_lgc_setupImageIOView"]
 - ["CSo8NSObject", "_lgc_setupLCDClockLayer"]
 - ["CSo8NSObject", "_lgc_setupSpecialLayerView"]
+- ["CSo8NSObject", "_lgc_setupTickAnimationView"]
 - !private ["CSo8NSObject", "addSublayer"]
 - !private ["CSo8NSObject", "addSubview"]
 - !private ["CSo8NSObject", "backgroundColor"]
@@ -680,10 +720,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidX"]
 - !private ["PSo16NSObjectProtocol", "CGRectGetWidth"]
 - !private ["PSo16NSObjectProtocol", "CGRectMake"]
+- !private ["PSo16NSObjectProtocol", "ImageIOView"]
 - !private ["PSo16NSObjectProtocol", "NSBundle"]
 - !private ["PSo16NSObjectProtocol", "NSURL"]
 - !private ["PSo16NSObjectProtocol", "NSURLRequest"]
 - !private ["PSo16NSObjectProtocol", "PropertyAnimationView"]
+- !private ["PSo16NSObjectProtocol", "TickAnimationView"]
 - !private ["PSo16NSObjectProtocol", "TransactionView"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
@@ -696,8 +738,10 @@ depends-member:
 - ["PSo16NSObjectProtocol", "_lgc_setupCAPropertyAnimation"]
 - ["PSo16NSObjectProtocol", "_lgc_setupCATransaction"]
 - ["PSo16NSObjectProtocol", "_lgc_setupClockLayer"]
+- ["PSo16NSObjectProtocol", "_lgc_setupImageIOView"]
 - ["PSo16NSObjectProtocol", "_lgc_setupLCDClockLayer"]
 - ["PSo16NSObjectProtocol", "_lgc_setupSpecialLayerView"]
+- ["PSo16NSObjectProtocol", "_lgc_setupTickAnimationView"]
 - !private ["PSo16NSObjectProtocol", "addSublayer"]
 - !private ["PSo16NSObjectProtocol", "addSubview"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
@@ -764,6 +808,8 @@ depends-member:
 - !private ["PSs10Strideable", "Distance"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["SS", "deinit"]
+- !private ["C17iOS_CoreAnimation17TickAnimationView", "frame"]
+- !private ["C17iOS_CoreAnimation17TickAnimationView", "init"]
 - !private ["C17iOS_CoreAnimation15TransactionView", "frame"]
 - !private ["C17iOS_CoreAnimation15TransactionView", "init"]
 - !private ["C17iOS_CoreAnimation13TransformView", "frame"]
@@ -793,10 +839,12 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGRectGetMidX"]
 - !private ["PSo21UIAppearanceContainer", "CGRectGetWidth"]
 - !private ["PSo21UIAppearanceContainer", "CGRectMake"]
+- !private ["PSo21UIAppearanceContainer", "ImageIOView"]
 - !private ["PSo21UIAppearanceContainer", "NSBundle"]
 - !private ["PSo21UIAppearanceContainer", "NSURL"]
 - !private ["PSo21UIAppearanceContainer", "NSURLRequest"]
 - !private ["PSo21UIAppearanceContainer", "PropertyAnimationView"]
+- !private ["PSo21UIAppearanceContainer", "TickAnimationView"]
 - !private ["PSo21UIAppearanceContainer", "TransactionView"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIScreen"]
@@ -809,8 +857,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "_lgc_setupCAPropertyAnimation"]
 - ["PSo21UIAppearanceContainer", "_lgc_setupCATransaction"]
 - ["PSo21UIAppearanceContainer", "_lgc_setupClockLayer"]
+- ["PSo21UIAppearanceContainer", "_lgc_setupImageIOView"]
 - ["PSo21UIAppearanceContainer", "_lgc_setupLCDClockLayer"]
 - ["PSo21UIAppearanceContainer", "_lgc_setupSpecialLayerView"]
+- ["PSo21UIAppearanceContainer", "_lgc_setupTickAnimationView"]
 - !private ["PSo21UIAppearanceContainer", "addSubview"]
 - !private ["PSo21UIAppearanceContainer", "bounds"]
 - !private ["PSo21UIAppearanceContainer", "center"]
@@ -842,10 +892,12 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGRectGetMidX"]
 - !private ["PSo18UIContentContainer", "CGRectGetWidth"]
 - !private ["PSo18UIContentContainer", "CGRectMake"]
+- !private ["PSo18UIContentContainer", "ImageIOView"]
 - !private ["PSo18UIContentContainer", "NSBundle"]
 - !private ["PSo18UIContentContainer", "NSURL"]
 - !private ["PSo18UIContentContainer", "NSURLRequest"]
 - !private ["PSo18UIContentContainer", "PropertyAnimationView"]
+- !private ["PSo18UIContentContainer", "TickAnimationView"]
 - !private ["PSo18UIContentContainer", "TransactionView"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIScreen"]
@@ -858,8 +910,10 @@ depends-member:
 - ["PSo18UIContentContainer", "_lgc_setupCAPropertyAnimation"]
 - ["PSo18UIContentContainer", "_lgc_setupCATransaction"]
 - ["PSo18UIContentContainer", "_lgc_setupClockLayer"]
+- ["PSo18UIContentContainer", "_lgc_setupImageIOView"]
 - ["PSo18UIContentContainer", "_lgc_setupLCDClockLayer"]
 - ["PSo18UIContentContainer", "_lgc_setupSpecialLayerView"]
+- ["PSo18UIContentContainer", "_lgc_setupTickAnimationView"]
 - ["PSo18UIContentContainer", "configureView"]
 - ["PSo18UIContentContainer", "descriptionView"]
 - ["PSo18UIContentContainer", "detailDescriptionLabel"]
@@ -897,10 +951,12 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGRectGetMidX"]
 - !private ["PSo18UIFocusEnvironment", "CGRectGetWidth"]
 - !private ["PSo18UIFocusEnvironment", "CGRectMake"]
+- !private ["PSo18UIFocusEnvironment", "ImageIOView"]
 - !private ["PSo18UIFocusEnvironment", "NSBundle"]
 - !private ["PSo18UIFocusEnvironment", "NSURL"]
 - !private ["PSo18UIFocusEnvironment", "NSURLRequest"]
 - !private ["PSo18UIFocusEnvironment", "PropertyAnimationView"]
+- !private ["PSo18UIFocusEnvironment", "TickAnimationView"]
 - !private ["PSo18UIFocusEnvironment", "TransactionView"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIScreen"]
@@ -913,8 +969,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "_lgc_setupCAPropertyAnimation"]
 - ["PSo18UIFocusEnvironment", "_lgc_setupCATransaction"]
 - ["PSo18UIFocusEnvironment", "_lgc_setupClockLayer"]
+- ["PSo18UIFocusEnvironment", "_lgc_setupImageIOView"]
 - ["PSo18UIFocusEnvironment", "_lgc_setupLCDClockLayer"]
 - ["PSo18UIFocusEnvironment", "_lgc_setupSpecialLayerView"]
+- ["PSo18UIFocusEnvironment", "_lgc_setupTickAnimationView"]
 - !private ["PSo18UIFocusEnvironment", "addSubview"]
 - !private ["PSo18UIFocusEnvironment", "bounds"]
 - !private ["PSo18UIFocusEnvironment", "center"]
@@ -953,6 +1011,7 @@ depends-member:
 - !private ["CSo11UIResponder", "CGRectMake"]
 - !private ["CSo11UIResponder", "ClockView"]
 - ["CSo11UIResponder", "ContentModel"]
+- !private ["CSo11UIResponder", "ImageIOView"]
 - !private ["CSo11UIResponder", "LCDClockView"]
 - !private ["CSo11UIResponder", "NSBundle"]
 - !private ["CSo11UIResponder", "NSURL"]
@@ -960,6 +1019,7 @@ depends-member:
 - !private ["CSo11UIResponder", "PropertyAnimationView"]
 - !private ["CSo11UIResponder", "SpecialLayer"]
 - !private ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "TickAnimationView"]
 - !private ["CSo11UIResponder", "TransactionView"]
 - !private ["CSo11UIResponder", "TransformView"]
 - !private ["CSo11UIResponder", "UIColor"]
@@ -975,8 +1035,10 @@ depends-member:
 - ["CSo11UIResponder", "_lgc_setupCAPropertyAnimation"]
 - ["CSo11UIResponder", "_lgc_setupCATransaction"]
 - ["CSo11UIResponder", "_lgc_setupClockLayer"]
+- ["CSo11UIResponder", "_lgc_setupImageIOView"]
 - ["CSo11UIResponder", "_lgc_setupLCDClockLayer"]
 - ["CSo11UIResponder", "_lgc_setupSpecialLayerView"]
+- ["CSo11UIResponder", "_lgc_setupTickAnimationView"]
 - !private ["CSo11UIResponder", "addSubview"]
 - !private ["CSo11UIResponder", "bounds"]
 - !private ["CSo11UIResponder", "center"]
@@ -1006,10 +1068,12 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGRectGetMidX"]
 - !private ["PSo16UIStateRestoring", "CGRectGetWidth"]
 - !private ["PSo16UIStateRestoring", "CGRectMake"]
+- !private ["PSo16UIStateRestoring", "ImageIOView"]
 - !private ["PSo16UIStateRestoring", "NSBundle"]
 - !private ["PSo16UIStateRestoring", "NSURL"]
 - !private ["PSo16UIStateRestoring", "NSURLRequest"]
 - !private ["PSo16UIStateRestoring", "PropertyAnimationView"]
+- !private ["PSo16UIStateRestoring", "TickAnimationView"]
 - !private ["PSo16UIStateRestoring", "TransactionView"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIScreen"]
@@ -1022,8 +1086,10 @@ depends-member:
 - ["PSo16UIStateRestoring", "_lgc_setupCAPropertyAnimation"]
 - ["PSo16UIStateRestoring", "_lgc_setupCATransaction"]
 - ["PSo16UIStateRestoring", "_lgc_setupClockLayer"]
+- ["PSo16UIStateRestoring", "_lgc_setupImageIOView"]
 - ["PSo16UIStateRestoring", "_lgc_setupLCDClockLayer"]
 - ["PSo16UIStateRestoring", "_lgc_setupSpecialLayerView"]
+- ["PSo16UIStateRestoring", "_lgc_setupTickAnimationView"]
 - ["PSo16UIStateRestoring", "configureView"]
 - ["PSo16UIStateRestoring", "descriptionView"]
 - ["PSo16UIStateRestoring", "detailDescriptionLabel"]
@@ -1045,10 +1111,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGRectGetMidX"]
 - !private ["PSo18UITraitEnvironment", "CGRectGetWidth"]
 - !private ["PSo18UITraitEnvironment", "CGRectMake"]
+- !private ["PSo18UITraitEnvironment", "ImageIOView"]
 - !private ["PSo18UITraitEnvironment", "NSBundle"]
 - !private ["PSo18UITraitEnvironment", "NSURL"]
 - !private ["PSo18UITraitEnvironment", "NSURLRequest"]
 - !private ["PSo18UITraitEnvironment", "PropertyAnimationView"]
+- !private ["PSo18UITraitEnvironment", "TickAnimationView"]
 - !private ["PSo18UITraitEnvironment", "TransactionView"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIScreen"]
@@ -1061,8 +1129,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "_lgc_setupCAPropertyAnimation"]
 - ["PSo18UITraitEnvironment", "_lgc_setupCATransaction"]
 - ["PSo18UITraitEnvironment", "_lgc_setupClockLayer"]
+- ["PSo18UITraitEnvironment", "_lgc_setupImageIOView"]
 - ["PSo18UITraitEnvironment", "_lgc_setupLCDClockLayer"]
 - ["PSo18UITraitEnvironment", "_lgc_setupSpecialLayerView"]
+- ["PSo18UITraitEnvironment", "_lgc_setupTickAnimationView"]
 - !private ["PSo18UITraitEnvironment", "addSubview"]
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - !private ["PSo18UITraitEnvironment", "center"]
@@ -1106,6 +1176,7 @@ depends-member:
 - !private ["CSo16UIViewController", "CGRectMake"]
 - !private ["CSo16UIViewController", "ClockView"]
 - ["CSo16UIViewController", "ContentModel"]
+- !private ["CSo16UIViewController", "ImageIOView"]
 - !private ["CSo16UIViewController", "LCDClockView"]
 - !private ["CSo16UIViewController", "NSBundle"]
 - !private ["CSo16UIViewController", "NSURL"]
@@ -1113,6 +1184,7 @@ depends-member:
 - !private ["CSo16UIViewController", "PropertyAnimationView"]
 - !private ["CSo16UIViewController", "SpecialLayer"]
 - !private ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "TickAnimationView"]
 - !private ["CSo16UIViewController", "TransactionView"]
 - !private ["CSo16UIViewController", "TransformView"]
 - !private ["CSo16UIViewController", "UIColor"]
@@ -1128,8 +1200,10 @@ depends-member:
 - ["CSo16UIViewController", "_lgc_setupCAPropertyAnimation"]
 - ["CSo16UIViewController", "_lgc_setupCATransaction"]
 - ["CSo16UIViewController", "_lgc_setupClockLayer"]
+- ["CSo16UIViewController", "_lgc_setupImageIOView"]
 - ["CSo16UIViewController", "_lgc_setupLCDClockLayer"]
 - ["CSo16UIViewController", "_lgc_setupSpecialLayerView"]
+- ["CSo16UIViewController", "_lgc_setupTickAnimationView"]
 - ["CSo16UIViewController", "configureView"]
 - ["CSo16UIViewController", "descriptionView"]
 - ["CSo16UIViewController", "detailDescriptionLabel"]
@@ -1223,6 +1297,7 @@ depends-nominal:
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
 - "PSs8Hashable"
+- !private "C17iOS_CoreAnimation11ImageIOView"
 - "SQ"
 - !private "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
@@ -1259,6 +1334,7 @@ depends-nominal:
 - !private "C17iOS_CoreAnimation12SpecialLayer"
 - !private "PSs10Strideable"
 - !private "SS"
+- !private "C17iOS_CoreAnimation17TickAnimationView"
 - !private "C17iOS_CoreAnimation15TransactionView"
 - !private "C17iOS_CoreAnimation13TransformView"
 - "PSo29UIAccessibilityIdentification"
@@ -1297,14 +1373,37 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/iOS CoreAnimation-Bridging-Header.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/chipmunk.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/chipmunk_types.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpVect.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpBB.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpTransform.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSpatialIndex.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpArbiter.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpBody.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpShape.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPolyShape.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpConstraint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPinJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSlideJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPivotJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpGrooveJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpDampedSpring.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpDampedRotarySpring.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpRotaryLimitJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpRatchetJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpGearJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSimpleMotor.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSpace.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "04fd4d0717222e7f0b3b47d738676675"
+interface-hash: "911a4655ff280fafd36a40163f6efa6a"

@@ -88,6 +88,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -111,12 +112,24 @@ SWIFT_CLASS("_TtC17iOS_CoreAnimation11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSValue;
+@class NSCoder;
+@class UITouch;
+@class UIEvent;
+
+SWIFT_CLASS("_TtC17iOS_CoreAnimation9BrushView")
+@interface BrushView : UIView
+@property (nonatomic, copy) NSArray<NSValue *> * __nonnull strokes;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)touchesBegan:(NSSet<UITouch *> * __nonnull)touches withEvent:(UIEvent * __nullable)event;
+- (void)touchesMoved:(NSSet<UITouch *> * __nonnull)touches withEvent:(UIEvent * __nullable)event;
+- (void)drawRect:(CGRect)rect;
+@end
+
 @class UIImageView;
 @class CAShapeLayer;
 @class UIButton;
-@class UITouch;
-@class UIEvent;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC17iOS_CoreAnimation25CAMediaTimingFunctionView")
 @interface CAMediaTimingFunctionView : UIView
@@ -213,6 +226,27 @@ SWIFT_CLASS("_TtC17iOS_CoreAnimation20DetailViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class LineDrawingView;
+
+SWIFT_CLASS("_TtC17iOS_CoreAnimation18DrawViewController")
+@interface DrawViewController : UIViewController
+@property (nonatomic, strong) LineDrawingView * __nonnull lineDrawView;
+@property (nonatomic, strong) BrushView * __nonnull brushView;
+- (void)viewDidLoad;
+- (IBAction)showBrush:(UIButton * __nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIScrollView;
+
+SWIFT_CLASS("_TtC17iOS_CoreAnimation11ImageIOView")
+@interface ImageIOView : UIView
+@property (nonatomic, readonly, strong) UIScrollView * __nonnull scrollView;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC17iOS_CoreAnimation12LCDClockView")
 @interface LCDClockView : UIView
@@ -240,6 +274,18 @@ SWIFT_CLASS("_TtC17iOS_CoreAnimation10LayerLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)awakeFromNib;
 - (void)setUp;
+@end
+
+
+SWIFT_CLASS("_TtC17iOS_CoreAnimation15LineDrawingView")
+@interface LineDrawingView : UIView
+@property (nonatomic, strong) UIBezierPath * __nonnull path;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
++ (Class __nonnull)layerClass;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)touchesBegan:(NSSet<UITouch *> * __nonnull)touches withEvent:(UIEvent * __nullable)event;
+- (void)touchesMoved:(NSSet<UITouch *> * __nonnull)touches withEvent:(UIEvent * __nullable)event;
+- (void)drawRect:(CGRect)rect;
 @end
 
 
@@ -301,6 +347,29 @@ SWIFT_CLASS("_TtC17iOS_CoreAnimation12SpecialLayer")
 - (IBAction)lgc_emitterLayerAction:(id __nonnull)sender;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CADisplayLink;
+
+SWIFT_CLASS("_TtC17iOS_CoreAnimation17TickAnimationView")
+@interface TickAnimationView : UIView
+@property (nonatomic, readonly, strong) UIView * __nonnull containerView;
+@property (nonatomic, readonly, strong) UIImageView * __nonnull ballView;
+@property (nonatomic, readonly, strong) UIImageView * __nonnull displayLink;
+@property (nonatomic, strong) NSTimer * __nullable timer;
+@property (nonatomic, strong) CADisplayLink * __nullable linkTimer;
+@property (nonatomic) NSTimeInterval duration;
+@property (nonatomic) NSTimeInterval timeOffset;
+@property (nonatomic) NSTimeInterval lastStep;
+@property (nonatomic, strong) id __nullable fromValue;
+@property (nonatomic, strong) id __nullable toValue;
+@property (nonatomic, strong) id __nullable linkFromValue;
+@property (nonatomic, strong) id __nullable linkToValue;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)step:(NSTimer * __nonnull)step;
+- (void)stepNSTimer:(CADisplayLink * __nonnull)step;
+- (void)touchesBegan:(NSSet<UITouch *> * __nonnull)touches withEvent:(UIEvent * __nullable)event;
 @end
 
 

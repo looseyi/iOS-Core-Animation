@@ -13,11 +13,13 @@ struct ContentModel {
     let desc: String
     let url: String
     let layer: String
+    let identifity: String
     init(json: [String : String]) {
-        self.layer = json["layer"]!
-        self.title = json["title"]!
-        self.desc = json["description"]!
-        self.url = json["url"]!
+        self.layer = json["layer"] ?? ""
+        self.title = json["title"] ?? ""
+        self.desc = json["description"] ?? ""
+        self.url = json["url"] ?? ""
+        self.identifity = json["identifity"] ?? "DetailCell"
     }
 }
 
@@ -30,7 +32,6 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
-//        tableView.registerClass(MasterCell.classForCoder(), forCellReuseIdentifier:"MasterCell")
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
         if let split = self.splitViewController {
@@ -62,6 +63,14 @@ class MasterViewController: UITableViewController {
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
+        } else if segue.identifier == "showDrawing" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let object = objects[indexPath.row]
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DrawViewController
+                controller.detailItem = object
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
         }
     }
 
@@ -76,8 +85,8 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MasterCell", forIndexPath: indexPath) as! MasterCell
         let object = objects[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(object.identifity, forIndexPath: indexPath) as! MasterCell
         if let titleLabel = cell.titleLabel {
             titleLabel.text = object.title
         }

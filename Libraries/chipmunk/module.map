@@ -1,0 +1,4 @@
+module chipmunk [system] {
+    header "chipmunk.h"
+    export *
+}

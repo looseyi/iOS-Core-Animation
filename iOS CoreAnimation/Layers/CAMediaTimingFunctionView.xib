@@ -13,10 +13,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjI-Do-yWA">
-                    <rect key="frame" x="307" y="0.0" width="120" height="208"/>
+                    <rect key="frame" x="277" y="0.0" width="160" height="208"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="120" id="O3Q-a7-bZU"/>
+                        <constraint firstAttribute="width" constant="160" id="O3Q-a7-bZU"/>
                     </constraints>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="PAT-K6-XA6"/>
@@ -24,12 +24,12 @@
                     </connections>
                 </pickerView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-O5-BfO">
-                    <rect key="frame" x="8" y="10" width="331" height="188"/>
+                    <rect key="frame" x="8" y="10" width="269" height="188"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-iB-feb">
-                    <rect key="frame" x="333" y="11" width="94" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ho-iB-feb">
+                    <rect key="frame" x="341" y="11" width="94" height="30"/>
                     <animations/>
                     <state key="normal" title="BollAnimation"/>
                     <connections>
@@ -47,8 +47,9 @@
                 <constraint firstItem="gC2-O5-BfO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Xtm-Kx-k3m"/>
                 <constraint firstItem="bjI-Do-yWA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bhl-N6-6bC"/>
                 <constraint firstAttribute="trailing" secondItem="gC2-O5-BfO" secondAttribute="trailing" constant="106" id="byK-KI-ZdK"/>
-                <constraint firstItem="bjI-Do-yWA" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" constant="-10" id="lxI-In-w5O"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="lxI-In-w5O"/>
                 <constraint firstItem="bjI-Do-yWA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="pbQ-v3-hHp"/>
+                <constraint firstItem="bjI-Do-yWA" firstAttribute="leading" secondItem="gC2-O5-BfO" secondAttribute="trailing" id="qjT-pg-gf1"/>
                 <constraint firstItem="bjI-Do-yWA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="qwx-op-zO0"/>
                 <constraint firstAttribute="bottom" secondItem="gC2-O5-BfO" secondAttribute="bottom" constant="10" id="y4W-cZ-YcD"/>
             </constraints>
@@ -56,6 +57,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="byK-KI-ZdK"/>
                     <exclude reference="Xr6-HI-bGA"/>
                     <exclude reference="pbQ-v3-hHp"/>
                 </mask>

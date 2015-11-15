@@ -115,7 +115,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="MasterCell" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MasterCell" rowHeight="99" id="WCw-Qf-5nD" customClass="MasterCell" customModule="iOS_CoreAnimation" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="DetailCell" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" rowHeight="99" id="WCw-Qf-5nD" customClass="MasterCell" customModule="iOS_CoreAnimation" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
@@ -156,6 +156,47 @@
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawingCell" rowHeight="99" id="Jih-Qm-Trz" customClass="MasterCell" customModule="iOS_CoreAnimation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="185" width="600" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jih-Qm-Trz" id="ywa-z4-Nrf">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="98.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS3-Xd-dhQ">
+                                            <rect key="frame" x="20" y="18" width="534" height="40"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFt-CE-EYU">
+                                            <rect key="frame" x="20" y="63" width="534" height="17"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="ZFt-CE-EYU" firstAttribute="leading" secondItem="ywa-z4-Nrf" secondAttribute="leadingMargin" constant="12" id="9IJ-Pv-vt5"/>
+                                        <constraint firstItem="xS3-Xd-dhQ" firstAttribute="top" secondItem="ywa-z4-Nrf" secondAttribute="topMargin" constant="10" id="CGc-fd-dcp"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZFt-CE-EYU" secondAttribute="bottom" constant="10" id="Hw7-pt-QXw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xS3-Xd-dhQ" secondAttribute="trailing" constant="5" id="SfU-vj-Bcz"/>
+                                        <constraint firstItem="ZFt-CE-EYU" firstAttribute="top" secondItem="xS3-Xd-dhQ" secondAttribute="bottom" constant="5" id="UPp-my-aEW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZFt-CE-EYU" secondAttribute="trailing" constant="5" id="ZOr-d3-qsv"/>
+                                        <constraint firstItem="xS3-Xd-dhQ" firstAttribute="leading" secondItem="ywa-z4-Nrf" secondAttribute="leadingMargin" constant="12" id="chR-e4-q6W"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="detailLabel" destination="ZFt-CE-EYU" id="vMb-bW-Bzx"/>
+                                    <outlet property="titleLabel" destination="xS3-Xd-dhQ" id="lUA-YJ-LUb"/>
+                                    <segue destination="qqr-O2-qDP" kind="show" id="VMq-vd-GPf"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <sections/>
                         <connections>
@@ -183,7 +224,58 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="129"/>
+            <point key="canvasLocation" x="43" y="153"/>
+        </scene>
+        <!--Draw View Controller-->
+        <scene sceneID="fCR-dq-3jg">
+            <objects>
+                <viewController id="UVF-N7-Fz6" customClass="DrawViewController" customModule="iOS_CoreAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0iu-BG-yOW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tl7-0v-rML"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="he4-eR-KKj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDy-Fe-1T5">
+                                <rect key="frame" x="50" y="87" width="51" height="30"/>
+                                <animations/>
+                                <state key="normal" title="BRUSH"/>
+                                <connections>
+                                    <action selector="showBrush:" destination="UVF-N7-Fz6" eventType="touchUpInside" id="BeG-7B-DYd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SDy-Fe-1T5" firstAttribute="leading" secondItem="he4-eR-KKj" secondAttribute="leadingMargin" constant="30" id="Rw6-tU-cJC"/>
+                            <constraint firstItem="SDy-Fe-1T5" firstAttribute="top" secondItem="0iu-BG-yOW" secondAttribute="bottom" constant="23" id="aGP-fI-Fmh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xwb-4B-ttR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iDg-ZX-VQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="873"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h2q-bl-m9t">
+            <objects>
+                <navigationController id="qqr-O2-qDP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uJ2-8T-8eU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UVF-N7-Fz6" kind="relationship" relationship="rootViewController" id="GRv-QD-UQd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Kd-0x-q9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27" y="873"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
