@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		856DAB861BEBAB6A00B3F847 /* TickAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DAB851BEBAB6900B3F847 /* TickAnimationView.swift */; };
+		856DAC0F1BED9D0E00B3F847 /* ChipmunkDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DAC0E1BED9D0E00B3F847 /* ChipmunkDemoView.swift */; };
+		856DAC491BEDBB4700B3F847 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DAC481BEDBB4700B3F847 /* DrawViewController.swift */; };
+		856DAC4D1BEDE17700B3F847 /* ImageIOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DAC4C1BEDE17700B3F847 /* ImageIOView.swift */; };
 		8586A9941BE4D25D00244D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586A9931BE4D25D00244D70 /* AppDelegate.swift */; };
 		8586A9961BE4D25D00244D70 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586A9951BE4D25D00244D70 /* MasterViewController.swift */; };
 		8586A9981BE4D25D00244D70 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586A9971BE4D25D00244D70 /* DetailViewController.swift */; };
@@ -42,6 +46,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		856DAB851BEBAB6900B3F847 /* TickAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickAnimationView.swift; sourceTree = "<group>"; };
+		856DABEC1BED9BC300B3F847 /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
+		856DABED1BED9BC300B3F847 /* chipmunk_ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_ffi.h; sourceTree = "<group>"; };
+		856DABEE1BED9BC300B3F847 /* chipmunk_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_private.h; sourceTree = "<group>"; };
+		856DABEF1BED9BC300B3F847 /* chipmunk_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_types.h; sourceTree = "<group>"; };
+		856DABF01BED9BC300B3F847 /* chipmunk_unsafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk_unsafe.h; sourceTree = "<group>"; };
+		856DABF11BED9BC300B3F847 /* cpArbiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpArbiter.h; sourceTree = "<group>"; };
+		856DABF21BED9BC300B3F847 /* cpBB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpBB.h; sourceTree = "<group>"; };
+		856DABF31BED9BC300B3F847 /* cpBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpBody.h; sourceTree = "<group>"; };
+		856DABF41BED9BC300B3F847 /* cpConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpConstraint.h; sourceTree = "<group>"; };
+		856DABF51BED9BC300B3F847 /* cpDampedRotarySpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpDampedRotarySpring.h; sourceTree = "<group>"; };
+		856DABF61BED9BC300B3F847 /* cpDampedSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpDampedSpring.h; sourceTree = "<group>"; };
+		856DABF71BED9BC300B3F847 /* cpGearJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpGearJoint.h; sourceTree = "<group>"; };
+		856DABF81BED9BC300B3F847 /* cpGrooveJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpGrooveJoint.h; sourceTree = "<group>"; };
+		856DABF91BED9BC300B3F847 /* cpHastySpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpHastySpace.h; sourceTree = "<group>"; };
+		856DABFA1BED9BC300B3F847 /* cpMarch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpMarch.h; sourceTree = "<group>"; };
+		856DABFB1BED9BC300B3F847 /* cpPinJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPinJoint.h; sourceTree = "<group>"; };
+		856DABFC1BED9BC300B3F847 /* cpPivotJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPivotJoint.h; sourceTree = "<group>"; };
+		856DABFD1BED9BC300B3F847 /* cpPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPolyline.h; sourceTree = "<group>"; };
+		856DABFE1BED9BC300B3F847 /* cpPolyShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpPolyShape.h; sourceTree = "<group>"; };
+		856DABFF1BED9BC300B3F847 /* cpRatchetJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRatchetJoint.h; sourceTree = "<group>"; };
+		856DAC001BED9BC300B3F847 /* cpRobust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRobust.h; sourceTree = "<group>"; };
+		856DAC011BED9BC300B3F847 /* cpRotaryLimitJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpRotaryLimitJoint.h; sourceTree = "<group>"; };
+		856DAC021BED9BC300B3F847 /* cpShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpShape.h; sourceTree = "<group>"; };
+		856DAC031BED9BC300B3F847 /* cpSimpleMotor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSimpleMotor.h; sourceTree = "<group>"; };
+		856DAC041BED9BC300B3F847 /* cpSlideJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSlideJoint.h; sourceTree = "<group>"; };
+		856DAC051BED9BC300B3F847 /* cpSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpace.h; sourceTree = "<group>"; };
+		856DAC061BED9BC300B3F847 /* cpSpatialIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpSpatialIndex.h; sourceTree = "<group>"; };
+		856DAC071BED9BC300B3F847 /* cpTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpTransform.h; sourceTree = "<group>"; };
+		856DAC081BED9BC300B3F847 /* cpVect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpVect.h; sourceTree = "<group>"; };
+		856DAC0B1BED9CD700B3F847 /* iOS CoreAnimation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS CoreAnimation-Bridging-Header.h"; sourceTree = "<group>"; };
+		856DAC0E1BED9D0E00B3F847 /* ChipmunkDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChipmunkDemoView.swift; sourceTree = "<group>"; };
+		856DAC481BEDBB4700B3F847 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		856DAC4C1BEDE17700B3F847 /* ImageIOView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageIOView.swift; sourceTree = "<group>"; };
 		8586A9901BE4D25D00244D70 /* iOS CoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS CoreAnimation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8586A9931BE4D25D00244D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8586A9951BE4D25D00244D70 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -88,13 +126,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		856DABEA1BED9BC300B3F847 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				856DABEB1BED9BC300B3F847 /* chipmunk */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		856DABEB1BED9BC300B3F847 /* chipmunk */ = {
+			isa = PBXGroup;
+			children = (
+				856DABEC1BED9BC300B3F847 /* chipmunk.h */,
+				856DABED1BED9BC300B3F847 /* chipmunk_ffi.h */,
+				856DABEE1BED9BC300B3F847 /* chipmunk_private.h */,
+				856DABEF1BED9BC300B3F847 /* chipmunk_types.h */,
+				856DABF01BED9BC300B3F847 /* chipmunk_unsafe.h */,
+				856DABF11BED9BC300B3F847 /* cpArbiter.h */,
+				856DABF21BED9BC300B3F847 /* cpBB.h */,
+				856DABF31BED9BC300B3F847 /* cpBody.h */,
+				856DABF41BED9BC300B3F847 /* cpConstraint.h */,
+				856DABF51BED9BC300B3F847 /* cpDampedRotarySpring.h */,
+				856DABF61BED9BC300B3F847 /* cpDampedSpring.h */,
+				856DABF71BED9BC300B3F847 /* cpGearJoint.h */,
+				856DABF81BED9BC300B3F847 /* cpGrooveJoint.h */,
+				856DABF91BED9BC300B3F847 /* cpHastySpace.h */,
+				856DABFA1BED9BC300B3F847 /* cpMarch.h */,
+				856DABFB1BED9BC300B3F847 /* cpPinJoint.h */,
+				856DABFC1BED9BC300B3F847 /* cpPivotJoint.h */,
+				856DABFD1BED9BC300B3F847 /* cpPolyline.h */,
+				856DABFE1BED9BC300B3F847 /* cpPolyShape.h */,
+				856DABFF1BED9BC300B3F847 /* cpRatchetJoint.h */,
+				856DAC001BED9BC300B3F847 /* cpRobust.h */,
+				856DAC011BED9BC300B3F847 /* cpRotaryLimitJoint.h */,
+				856DAC021BED9BC300B3F847 /* cpShape.h */,
+				856DAC031BED9BC300B3F847 /* cpSimpleMotor.h */,
+				856DAC041BED9BC300B3F847 /* cpSlideJoint.h */,
+				856DAC051BED9BC300B3F847 /* cpSpace.h */,
+				856DAC061BED9BC300B3F847 /* cpSpatialIndex.h */,
+				856DAC071BED9BC300B3F847 /* cpTransform.h */,
+				856DAC081BED9BC300B3F847 /* cpVect.h */,
+			);
+			path = chipmunk;
+			sourceTree = "<group>";
+		};
 		8586A9871BE4D25D00244D70 = {
 			isa = PBXGroup;
 			children = (
+				856DABEA1BED9BC300B3F847 /* Libraries */,
 				8586A9BA1BE4F13E00244D70 /* Layers */,
 				8586A9921BE4D25D00244D70 /* iOS CoreAnimation */,
 				8586A9A91BE4D25D00244D70 /* iOS CoreAnimationUITests */,
 				8586A9911BE4D25D00244D70 /* Products */,
+				856DAC0B1BED9CD700B3F847 /* iOS CoreAnimation-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +197,7 @@
 				8586A9931BE4D25D00244D70 /* AppDelegate.swift */,
 				8586A9951BE4D25D00244D70 /* MasterViewController.swift */,
 				8586A9971BE4D25D00244D70 /* DetailViewController.swift */,
+				856DAC481BEDBB4700B3F847 /* DrawViewController.swift */,
 				8586A9B51BE4D2ED00244D70 /* content.json */,
 				8586A9991BE4D25D00244D70 /* Main.storyboard */,
 				8586A99C1BE4D25D00244D70 /* Assets.xcassets */,
@@ -144,7 +229,10 @@
 				8586A9C41BE5279600244D70 /* TransformView.xib */,
 				85DD82931BE5B887000664D1 /* SpecialLayer.xib */,
 				85DD82A41BE67CA1000664D1 /* CAMediaTimingFunctionView.xib */,
+				856DAC4C1BEDE17700B3F847 /* ImageIOView.swift */,
+				856DAC0E1BED9D0E00B3F847 /* ChipmunkDemoView.swift */,
 				85DD82A61BE67CA8000664D1 /* CAMediaTimingFunctionView.swift */,
+				856DAB851BEBAB6900B3F847 /* TickAnimationView.swift */,
 				85DD82951BE5B896000664D1 /* SpecialLayer.swift */,
 				85DD82971BE5E765000664D1 /* TransactionView.swift */,
 				8586A9C61BE5279D00244D70 /* TransformView.swift */,
@@ -261,8 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856DAB861BEBAB6A00B3F847 /* TickAnimationView.swift in Sources */,
 				8586A9981BE4D25D00244D70 /* DetailViewController.swift in Sources */,
+				856DAC0F1BED9D0E00B3F847 /* ChipmunkDemoView.swift in Sources */,
+				856DAC4D1BEDE17700B3F847 /* ImageIOView.swift in Sources */,
 				85DD82981BE5E765000664D1 /* TransactionView.swift in Sources */,
+				856DAC491BEDBB4700B3F847 /* DrawViewController.swift in Sources */,
 				8586A9961BE4D25D00244D70 /* MasterViewController.swift in Sources */,
 				85DD82A01BE64F7E000664D1 /* CAMediaTimingView.swift in Sources */,
 				8586A9BE1BE4F41600244D70 /* Clock.swift in Sources */,
@@ -400,10 +492,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "iOS CoreAnimation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xueqiu.fund.iOS-CoreAnimation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Libraries/chipmunk.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS CoreAnimation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -411,10 +507,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "iOS CoreAnimation/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xueqiu.fund.iOS-CoreAnimation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Libraries/chipmunk.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS CoreAnimation-Bridging-Header.h";
 			};
 			name = Release;
 		};

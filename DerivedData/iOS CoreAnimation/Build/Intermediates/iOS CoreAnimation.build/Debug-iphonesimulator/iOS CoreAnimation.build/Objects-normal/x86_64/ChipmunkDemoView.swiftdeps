@@ -1,0 +1,50 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MASS"
+- "GRAVITY"
+provides-nominal:
+provides-member:
+provides-dynamic-lookup:
+depends-top-level:
+- "GRAVITY"
+- "MASS"
+- "cpFloat"
+depends-member:
+depends-nominal:
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/iOS CoreAnimation-Bridging-Header.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/chipmunk.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/chipmunk_types.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpVect.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpBB.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpTransform.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSpatialIndex.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpArbiter.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpBody.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpShape.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPolyShape.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpConstraint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPinJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSlideJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPivotJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpGrooveJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpDampedSpring.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpDampedRotarySpring.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpRotaryLimitJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpRatchetJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpGearJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSimpleMotor.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSpace.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+interface-hash: "2ba3f89e4cbf013e2dfa2e3ce5b49397"

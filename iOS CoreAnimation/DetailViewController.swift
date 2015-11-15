@@ -64,6 +64,10 @@ class DetailViewController: UIViewController {
             _lgc_setupCAMediaTimingAnimation()
         case "CAMediaTimingFunction":
             _lgc_setupCAMediaTimingFunction()
+        case "TickAnimation":
+            _lgc_setupTickAnimationView()
+        case "ImageIOView":
+            _lgc_setupImageIOView()
         default: break
         }
     }
@@ -132,6 +136,18 @@ class DetailViewController: UIViewController {
     
     private func _lgc_setupCAMediaTimingFunction() {
         let transformView = NSBundle.mainBundle().loadNibNamed("CAMediaTimingFunctionView", owner: nil, options:nil)[0] as! CAMediaTimingFunctionView
+        transformView.frame = CGRectMake(10, 100, CGRectGetWidth(view.bounds) - 20, 240)
+        view.addSubview(transformView)
+    }
+    
+    private func _lgc_setupTickAnimationView() {
+        let transformView = TickAnimationView()
+        transformView.frame = CGRectMake(10, 100, CGRectGetWidth(view.bounds) - 20, 240)
+        view.addSubview(transformView)
+    }
+    
+    private func _lgc_setupImageIOView() {
+        let transformView = ImageIOView()
         transformView.frame = CGRectMake(10, 100, CGRectGetWidth(view.bounds) - 20, 240)
         view.addSubview(transformView)
     }

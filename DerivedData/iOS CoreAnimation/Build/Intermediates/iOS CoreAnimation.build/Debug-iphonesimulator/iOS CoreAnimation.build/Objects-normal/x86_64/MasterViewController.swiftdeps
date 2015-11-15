@@ -12,43 +12,45 @@ provides-member:
 - ["C17iOS_CoreAnimation20MasterViewController", ""]
 - ["C17iOS_CoreAnimation10MasterCell", ""]
 provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
 - "titleLabel"
 - "tableView"
 - "tableView"
-- "detailLabel"
-- "detailViewController"
-- "numberOfSectionsInTableView"
 - "viewWillAppear"
-- "didReceiveMemoryWarning"
+- "detailViewController"
 - "viewDidLoad"
+- "numberOfSectionsInTableView"
+- "detailLabel"
 - "prepareForSegue"
 depends-top-level:
-- "MasterCell"
-- !private "BooleanLiteralType"
-- !private "print"
-- "UITableViewController"
-- "ContentModel"
-- !private "UIView"
-- "UITableViewCell"
-- !private "NSBundle"
-- "Int"
-- "NSIndexPath"
-- !private "NSJSONSerialization"
-- "String"
-- "UILabel"
-- !private "-"
-- "AnyObject"
-- "Bool"
-- "UIStoryboardSegue"
-- "UITableView"
-- !private "StringLiteralType"
-- !private "NSData"
-- !private "=="
-- !private "UITableViewAutomaticDimension"
-- "DetailViewController"
-- !private "UINavigationController"
-- !private "NSArray"
 - "MasterViewController"
+- !private "BooleanLiteralType"
+- !private "UITableViewAutomaticDimension"
+- !private "NSData"
+- "String"
+- !private "UINavigationController"
+- "UITableViewCell"
+- !private "NSArray"
+- "DetailViewController"
+- !private "DrawViewController"
+- !private "UIView"
+- "UILabel"
+- !private "print"
+- "AnyObject"
+- "NSIndexPath"
+- "UITableView"
+- "Bool"
+- "UITableViewController"
+- "UIStoryboardSegue"
+- !private "NSBundle"
+- !private "NSJSONSerialization"
+- !private "StringLiteralType"
+- "MasterCell"
+- !private "=="
+- "Int"
+- "ContentModel"
+- !private "??"
+- !private "-"
 depends-member:
 - ["PSs9AnyObject", "ContentModel"]
 - !private ["PSs9AnyObject", "Element"]
@@ -187,6 +189,7 @@ depends-member:
 - ["V17iOS_CoreAnimation12ContentModel", "String"]
 - ["V17iOS_CoreAnimation12ContentModel", "deinit"]
 - ["V17iOS_CoreAnimation12ContentModel", "desc"]
+- ["V17iOS_CoreAnimation12ContentModel", "identifity"]
 - ["V17iOS_CoreAnimation12ContentModel", "init"]
 - ["V17iOS_CoreAnimation12ContentModel", "layer"]
 - ["V17iOS_CoreAnimation12ContentModel", "title"]
@@ -262,6 +265,8 @@ depends-member:
 - !private ["VSs10Dictionary", "subscript"]
 - !private ["PSs28DictionaryLiteralConvertible", "Index"]
 - !private ["PSs28DictionaryLiteralConvertible", "subscript"]
+- !private ["C17iOS_CoreAnimation18DrawViewController", "detailItem"]
+- !private ["C17iOS_CoreAnimation18DrawViewController", "navigationItem"]
 - ["PSs9Equatable", "ContentModel"]
 - !private ["PSs9Equatable", "DataReadingMappedIfSafe"]
 - !private ["PSs9Equatable", "Distance"]
@@ -396,6 +401,7 @@ depends-member:
 - ["C17iOS_CoreAnimation20MasterViewController", "Bool"]
 - ["C17iOS_CoreAnimation20MasterViewController", "ContentModel"]
 - ["C17iOS_CoreAnimation20MasterViewController", "DetailViewController"]
+- !private ["C17iOS_CoreAnimation20MasterViewController", "DrawViewController"]
 - ["C17iOS_CoreAnimation20MasterViewController", "Int"]
 - !private ["C17iOS_CoreAnimation20MasterViewController", "MasterCell"]
 - !private ["C17iOS_CoreAnimation20MasterViewController", "NSArray"]
@@ -535,6 +541,7 @@ depends-member:
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "ContentModel"]
 - ["CSo8NSObject", "DetailViewController"]
+- !private ["CSo8NSObject", "DrawViewController"]
 - !private ["CSo8NSObject", "Generator"]
 - ["CSo8NSObject", "Int"]
 - !private ["CSo8NSObject", "JSONObjectWithData"]
@@ -829,6 +836,7 @@ depends-member:
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "ContentModel"]
 - ["CSo11UIResponder", "DetailViewController"]
+- !private ["CSo11UIResponder", "DrawViewController"]
 - ["CSo11UIResponder", "Int"]
 - !private ["CSo11UIResponder", "MasterCell"]
 - !private ["CSo11UIResponder", "NSArray"]
@@ -945,6 +953,7 @@ depends-member:
 - ["CSo21UITableViewController", "Bool"]
 - ["CSo21UITableViewController", "ContentModel"]
 - ["CSo21UITableViewController", "DetailViewController"]
+- !private ["CSo21UITableViewController", "DrawViewController"]
 - ["CSo21UITableViewController", "Int"]
 - !private ["CSo21UITableViewController", "MasterCell"]
 - !private ["CSo21UITableViewController", "NSArray"]
@@ -1063,6 +1072,7 @@ depends-member:
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "ContentModel"]
 - ["CSo16UIViewController", "DetailViewController"]
+- !private ["CSo16UIViewController", "DrawViewController"]
 - ["CSo16UIViewController", "Int"]
 - !private ["CSo16UIViewController", "MasterCell"]
 - !private ["CSo16UIViewController", "NSArray"]
@@ -1192,6 +1202,7 @@ depends-nominal:
 - !private "C17iOS_CoreAnimation20DetailViewController"
 - !private "VSs10Dictionary"
 - !private "PSs28DictionaryLiteralConvertible"
+- !private "C17iOS_CoreAnimation18DrawViewController"
 - "PSs9Equatable"
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
@@ -1279,14 +1290,37 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/iOS CoreAnimation-Bridging-Header.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/chipmunk.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/chipmunk_types.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpVect.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpBB.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpTransform.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSpatialIndex.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpArbiter.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpBody.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpShape.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPolyShape.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpConstraint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPinJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSlideJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpPivotJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpGrooveJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpDampedSpring.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpDampedRotarySpring.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpRotaryLimitJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpRatchetJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpGearJoint.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSimpleMotor.h"
+- "/Users/mac/Desktop/iOS CoreAnimation/Libraries/chipmunk/cpSpace.h"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/WebKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "7dd453496e914f8f3c86c6ce6b617c50"
+interface-hash: "d068553601dfd3eecd49fedb816a30fd"

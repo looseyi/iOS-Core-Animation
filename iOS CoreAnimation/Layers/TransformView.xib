@@ -275,6 +275,6 @@
     </objects>
     <resources>
         <image name="dial" width="356" height="343"/>
-        <image name="transform" width="240" height="240"/>
+        <image name="transform" width="120" height="120"/>
     </resources>
 </document>
